@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ماشین حساب گلس مورفیسم</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="calculator" aria-label="ماشین حساب">
+        <h1>ماشین حساب</h1>
+        <p class="subtitle">چهار عمل اصلی</p>
+
+        <label for="display" class="sr-only">نمایشگر</label>
+        <input id="display" class="display" type="text" value="0" readonly />
+
+        <div class="keys">
+          <button class="key action" data-action="clear">C</button>
+          <button class="key action" data-action="backspace">⌫</button>
+          <button class="key operator" data-operator="/">÷</button>
+          <button class="key operator" data-operator="*">×</button>
+
+          <button class="key number" data-number="7">7</button>
+          <button class="key number" data-number="8">8</button>
+          <button class="key number" data-number="9">9</button>
+          <button class="key operator" data-operator="-">−</button>
+
+          <button class="key number" data-number="4">4</button>
+          <button class="key number" data-number="5">5</button>
+          <button class="key number" data-number="6">6</button>
+          <button class="key operator" data-operator="+">+</button>
+
+          <button class="key number" data-number="1">1</button>
+          <button class="key number" data-number="2">2</button>
+          <button class="key number" data-number="3">3</button>
+          <button class="key equals" data-action="calculate">=</button>
+
+          <button class="key number zero" data-number="0">0</button>
+          <button class="key number" data-number=".">.</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
