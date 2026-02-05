@@ -49,7 +49,7 @@ function calculate(a, b, op) {
   if (op === "+") return a + b;
   if (op === "-") return a - b;
   if (op === "*") return a * b;
-  if (op === "/") return b === 0 ? "خطا" : a / b;
+  if (op === "/") return b === 0 ? "Error" : a / b;
   return b;
 }
 
@@ -66,7 +66,7 @@ function handleOperator(nextOperator) {
   } else if (operator) {
     const result = calculate(firstOperand, inputValue, operator);
     current = String(result);
-    firstOperand = result === "خطا" ? null : Number(result);
+    firstOperand = result === "Error" ? null : Number(result);
   }
 
   waitingSecondOperand = true;
@@ -79,7 +79,7 @@ function handleEquals() {
   const inputValue = Number(current);
   const result = calculate(firstOperand, inputValue, operator);
   current = String(result);
-  firstOperand = result === "خطا" ? null : Number(result);
+  firstOperand = result === "Error" ? null : Number(result);
   operator = null;
   waitingSecondOperand = false;
 }
